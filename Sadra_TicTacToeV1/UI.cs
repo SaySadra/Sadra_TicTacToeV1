@@ -12,7 +12,7 @@ namespace UI
 
             while (true)
             {
-                SetField();
+                UserFields.SetField();
                 DataApplication.inputString = Console.ReadLine();
                 if (DataApplication.inputString == "/")
                 {
@@ -20,7 +20,7 @@ namespace UI
                 }
                 else if (DataApplication.inputString == ".")
                 {
-                    ResetGame();
+                    UserFields.ResetGame();
                 }
                 else if (int.TryParse(DataApplication.inputString, out DataApplication.inputNumber) && DataApplication.inputNumber >= 1 && DataApplication.inputNumber <= 9)
                 {
@@ -34,7 +34,7 @@ namespace UI
                             {
                                 Console.WriteLine("X WON !!!!!!!!!!!! , press enter to reset game");
                                 Console.ReadKey();
-                                ResetGame();
+                                UserFields.ResetGame();
                             }
                         }
 
@@ -49,7 +49,7 @@ namespace UI
                             {
                                 Console.WriteLine("O WON !!!!!!!!!!!! , press enter to reset game");
                                 Console.ReadKey();
-                                ResetGame();
+                                UserFields.ResetGame();
                             }
                         }
                     }
@@ -57,7 +57,7 @@ namespace UI
                     {
                         Console.WriteLine("your game is draw!, press enter to Reset Game");
                         Console.ReadKey();
-                        ResetGame();
+                        UserFields.ResetGame();
                     }
 
                 }
@@ -74,29 +74,7 @@ namespace UI
             Console.ReadKey();
         }
         
-        public static void SetField()
-        {
-            Console.Clear();
-            Console.WriteLine("       |       |       ");
-            Console.WriteLine("   {0}   |   {1}   |   {2}   ", DataApplication.inputPlayer[0], DataApplication.inputPlayer[1], DataApplication.inputPlayer[2]);
-            Console.WriteLine("       |       |       ");
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("       |       |       ");
-            Console.WriteLine("   {0}   |   {1}   |   {2}   ", DataApplication.inputPlayer[3], DataApplication.inputPlayer[4], DataApplication.inputPlayer[5]);
-            Console.WriteLine("       |       |       ");
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("       |       |       ");
-            Console.WriteLine("   {0}   |   {1}   |   {2}   ", DataApplication.inputPlayer[6], DataApplication.inputPlayer[7], DataApplication.inputPlayer[8]);
-            Console.WriteLine("       |       |       ");
-            Console.WriteLine("please enter a valid number !, for end game please press /, and for restart game please press .");
-        }
-        public static void ResetGame()
-        {
-            DataApplication.inputPlayer = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-            DataApplication.inputString = "";
-            DataApplication.inputNumber = 0;
-            DataApplication.counter = 1;
-            SetField();
-        }
+
+
     }
 }
