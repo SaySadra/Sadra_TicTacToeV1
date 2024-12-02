@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sadra_TicTacToeV1", "Sadra_TicTacToeV1\Sadra_TicTacToeV1.csproj", "{467C0841-A754-4E97-A110-B4C24A87DA94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{D2A8BC40-BAAF-4241-92CD-4EEFE7E77F39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A5A84AC9-145A-4776-9464-DF9EC1ECCFFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{467C0841-A754-4E97-A110-B4C24A87DA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{467C0841-A754-4E97-A110-B4C24A87DA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{467C0841-A754-4E97-A110-B4C24A87DA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A8BC40-BAAF-4241-92CD-4EEFE7E77F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A8BC40-BAAF-4241-92CD-4EEFE7E77F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A8BC40-BAAF-4241-92CD-4EEFE7E77F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A8BC40-BAAF-4241-92CD-4EEFE7E77F39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A84AC9-145A-4776-9464-DF9EC1ECCFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A84AC9-145A-4776-9464-DF9EC1ECCFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A84AC9-145A-4776-9464-DF9EC1ECCFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A84AC9-145A-4776-9464-DF9EC1ECCFFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
