@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sadra_TicTacToeV1", "Sadra_TicTacToeV1\Sadra_TicTacToeV1.csproj", "{467C0841-A754-4E97-A110-B4C24A87DA94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "Sadra_TicTacToeV1\UI.csproj", "{467C0841-A754-4E97-A110-B4C24A87DA94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{D2A8BC40-BAAF-4241-92CD-4EEFE7E77F39}"
 EndProject
