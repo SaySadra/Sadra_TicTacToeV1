@@ -12,13 +12,17 @@ namespace Sadra_TicTacToeV1
         static void Main(string[] args)
         {
 
-            while (inputString != "/")
+            while (true)
             {
                 SetField();
                 inputString = Console.ReadLine();
-                if (int.TryParse(inputString, out inputNumber) && inputNumber >= 1 && inputNumber <= 9)
+                if (inputString == "/")
                 {
-                    if (counter % 2 == 1)
+                    break;
+                }
+                else if (int.TryParse(inputString, out inputNumber) && inputNumber >= 1 && inputNumber <= 9)
+                {
+                    if (counter % 2 == 1 && counter < 9)
                     {
                         if (inputPlayer[inputNumber - 1] != "X" && inputPlayer[inputNumber - 1] != "O")
                         {
@@ -27,7 +31,7 @@ namespace Sadra_TicTacToeV1
                         }
 
                     }
-                    else if (counter % 2 == 0)
+                    else if (counter % 2 == 0 && counter < 9)
                     {
                         if (inputPlayer[inputNumber - 1] != "X" && inputPlayer[inputNumber - 1] != "O")
                         {
@@ -35,18 +39,22 @@ namespace Sadra_TicTacToeV1
                             counter++;
                         }
                     }
-                    if (counter > 9)
+                    else
                     {
                         Console.WriteLine("your game is draw!, press enter to Reset Game");
                         Console.ReadKey();
                         ResetGame();
                     }
-                    if (inputString == "/")
-                    {
-                        break;
-                    }
+
                 }
-                Console.Clear();
+
+                else if (!int.TryParse(inputString, out inputNumber) || inputNumber < 1 || inputNumber > 9)
+                {
+                    Console.WriteLine("you entered wrong!, press enter to continue");
+                    Console.ReadKey();
+                    continue;
+                }
+                
             }
             
             Console.ReadKey();
@@ -54,6 +62,7 @@ namespace Sadra_TicTacToeV1
         
         public static void SetField()
         {
+            Console.Clear();
             Console.WriteLine("       |       |       ");
             Console.WriteLine("   {0}   |   {1}   |   {2}   ", inputPlayer[0], inputPlayer[1], inputPlayer[2]);
             Console.WriteLine("       |       |       ");
@@ -65,7 +74,7 @@ namespace Sadra_TicTacToeV1
             Console.WriteLine("       |       |       ");
             Console.WriteLine("   {0}   |   {1}   |   {2}   ", inputPlayer[6], inputPlayer[7], inputPlayer[8]);
             Console.WriteLine("       |       |       ");
-            Console.WriteLine("please enter a valid number !");
+            Console.WriteLine("please enter a valid number !, for end game please press /");
         }
         public static void ResetGame()
         {
